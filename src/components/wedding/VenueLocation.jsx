@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  MapPin,
-  Navigation,
-  Home,
-  Share2,
-  Clock,
-  Heart,
-} from "lucide-react";
+import { MapPin, Navigation, Home, Share2, Clock, Heart } from "lucide-react";
 
 /* ═══════════════════════════════════════════════════
    VENUES DATA
@@ -25,12 +18,27 @@ const VENUES = {
     icon: "🍋",
     events: [
       { icon: "💛", label: "Haldi", time: "25 Nov · 10 AM", at: "Poolside" },
-      { icon: "🍸", label: "Sangeet", time: "25 Nov · 6:30 PM", at: "Tangerine Hall 2" },
-      { icon: "💍", label: "Reception & Vivah", time: "26 Nov · 7:30 PM", at: "Tangerine Hall 1 & 2" },
-      { icon: "🙏", label: "Muhurtam", time: "27 Nov · 5:02 AM*", at: "Tangerine Hall 1 & 2" },
+      {
+        icon: "🍸",
+        label: "Sangeet",
+        time: "25 Nov · 6:30 PM",
+        at: "Tangerine Hall 2",
+      },
+      {
+        icon: "💍",
+        label: "Reception & Vivah",
+        time: "26 Nov · 7:30 PM",
+        at: "Tangerine Hall 1 & 2",
+      },
+      {
+        icon: "🙏",
+        label: "Muhurtam",
+        time: "27 Nov · 5:02 AM*",
+        at: "Tangerine Hall 1 & 2",
+      },
     ],
   },
-  "residence": {
+  residence: {
     id: "residence",
     name: "Tamarind Terraces",
     subtitle: "Bhubaneswar, Odisha",
@@ -41,8 +49,18 @@ const VENUES = {
       "https://www.google.com/maps?q=20.3374267,85.7979575&output=embed",
     icon: "🏡",
     events: [
-      { icon: "🌿", label: "Mehendi", time: "24 Nov · 6 PM", at: "Tamarind Terraces" },
-      { icon: "👑", label: "Baraat Flag-off", time: "26 Nov · 4 PM", at: "Tamarind Terraces" },
+      {
+        icon: "🌿",
+        label: "Mehendi",
+        time: "24 Nov · 6 PM",
+        at: "Tamarind Terraces",
+      },
+      {
+        icon: "👑",
+        label: "Baraat Flag-off",
+        time: "26 Nov · 4 PM",
+        at: "Tamarind Terraces",
+      },
     ],
   },
 };
@@ -66,19 +84,20 @@ const VenueLocation = () => {
       }
     };
     window.addEventListener("select-wedding-venue", handleSelectVenue);
-    return () => window.removeEventListener("select-wedding-venue", handleSelectVenue);
+    return () =>
+      window.removeEventListener("select-wedding-venue", handleSelectVenue);
   }, []);
 
   const handleShareWhatsApp = () => {
     const text = encodeURIComponent(
-      `Join us for Adarsh & Radhika's Wedding!\n\n📍 ${venue.name}\n📌 ${venue.address}\n🗺️ ${venue.googleMapsUrl}`
+      `Join us for Adarsh & Radhika's Wedding!\n\n📍 ${venue.name}\n📌 ${venue.address}\n🗺️ ${venue.googleMapsUrl}`,
     );
     window.open(`https://wa.me/?text=${text}`, "_blank");
   };
 
   const TABS = [
-    { key: "lemon-tree", label: "Lemon Tree", icon: <Home size={14} /> },
     { key: "residence", label: "Residence", icon: <MapPin size={14} /> },
+    { key: "lemon-tree", label: "Lemon Tree", icon: <Home size={14} /> },
   ];
 
   return (
@@ -143,7 +162,6 @@ const VenueLocation = () => {
 
       {/* Main Container */}
       <div className="max-w-4xl mx-auto px-1 sm:px-4">
-
         {/* Venue Tabs */}
         <div className="flex justify-center gap-2 sm:gap-3 mb-6">
           {TABS.map((tab) => {
@@ -152,10 +170,11 @@ const VenueLocation = () => {
               <button
                 key={tab.key}
                 onClick={() => setSelectedVenueKey(tab.key)}
-                className={`flex items-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold border transition-all duration-200 cursor-pointer ${isActive
+                className={`flex items-center gap-1.5 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold border transition-all duration-200 cursor-pointer ${
+                  isActive
                     ? "bg-[var(--clr-maroon)] text-[var(--clr-gold-bright)] border-[var(--clr-gold)] shadow-md scale-105"
                     : "bg-[var(--clr-ivory)] text-[var(--clr-text)] border-[rgba(201,168,76,0.3)] hover:border-[var(--clr-gold)]"
-                  }`}
+                }`}
               >
                 {tab.icon}
                 <span>{tab.label}</span>
@@ -175,7 +194,10 @@ const VenueLocation = () => {
             className="rounded-3xl overflow-hidden border border-[rgba(201,168,76,0.3)] shadow-[var(--shadow-card)] bg-[var(--clr-ivory)]"
           >
             {/* Map */}
-            <div className="relative w-full" style={{ height: "min(55vw, 340px)" }}>
+            <div
+              className="relative w-full"
+              style={{ height: "min(55vw, 340px)" }}
+            >
               <iframe
                 title={`Map of ${venue.name}`}
                 src={venue.embedUrl}
@@ -190,8 +212,12 @@ const VenueLocation = () => {
               <div className="absolute top-3 left-3 flex items-center gap-1.5 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow border border-amber-200 pointer-events-none">
                 <span className="text-base">{venue.icon}</span>
                 <div>
-                  <p className="font-serif text-xs font-bold text-[var(--clr-maroon)] leading-tight">{venue.name}</p>
-                  <p className="text-[10px] text-gray-500 font-sans leading-tight">{venue.subtitle}</p>
+                  <p className="font-serif text-xs font-bold text-[var(--clr-maroon)] leading-tight">
+                    {venue.name}
+                  </p>
+                  <p className="text-[10px] text-gray-500 font-sans leading-tight">
+                    {venue.subtitle}
+                  </p>
                 </div>
               </div>
               {/* Open Maps CTA — floating on map */}
@@ -210,10 +236,12 @@ const VenueLocation = () => {
 
             {/* Info Panel */}
             <div className="p-5 sm:p-6">
-
               {/* Address */}
               <div className="flex items-start gap-3 mb-4 p-3 rounded-xl bg-amber-50/60 border border-amber-200/70">
-                <MapPin className="text-[var(--clr-maroon)] flex-shrink-0 mt-0.5" size={15} />
+                <MapPin
+                  className="text-[var(--clr-maroon)] flex-shrink-0 mt-0.5"
+                  size={15}
+                />
                 <p className="font-sans text-sm text-[var(--clr-text)] leading-relaxed flex-1">
                   {venue.address}
                 </p>
@@ -233,7 +261,10 @@ const VenueLocation = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold no-underline transition-transform hover:scale-105 active:scale-95 shadow"
-                  style={{ background: "var(--grad-maroon)", color: "var(--clr-gold-bright)" }}
+                  style={{
+                    background: "var(--grad-maroon)",
+                    color: "var(--clr-gold-bright)",
+                  }}
                 >
                   <Navigation size={12} />
                   <span>Open in Google Maps</span>
@@ -256,12 +287,19 @@ const VenueLocation = () => {
                     >
                       <span className="text-xl flex-shrink-0">{ev.icon}</span>
                       <div className="min-w-0">
-                        <p className="font-serif text-sm font-bold text-[var(--clr-maroon-deep)] truncate">{ev.label}</p>
+                        <p className="font-serif text-sm font-bold text-[var(--clr-maroon-deep)] truncate">
+                          {ev.label}
+                        </p>
                         <div className="flex items-center gap-1 text-[11px] text-gray-500 font-sans">
-                          <Clock size={10} className="text-[var(--clr-gold)] flex-shrink-0" />
+                          <Clock
+                            size={10}
+                            className="text-[var(--clr-gold)] flex-shrink-0"
+                          />
                           <span className="truncate">{ev.time}</span>
                         </div>
-                        <p className="text-[10px] text-gray-400 font-sans truncate">{ev.at}</p>
+                        <p className="text-[10px] text-gray-400 font-sans truncate">
+                          {ev.at}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -272,11 +310,9 @@ const VenueLocation = () => {
                   </p>
                 )}
               </div>
-
             </div>
           </motion.div>
         </AnimatePresence>
-
       </div>
     </section>
   );

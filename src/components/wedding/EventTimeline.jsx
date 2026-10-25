@@ -46,7 +46,7 @@ const events = [
         dressCode: "Vibrant Yellow / Sunny Traditional",
       },
       {
-        name: "शाम शानदार — Just Toast On The Coast",
+        name: "शाम शानदार (Sangeet) — Just Toast On The Coast",
         time: "6:30 PM onwards",
         location: "Tangerine Grand Hall 2, Hotel Lemon Tree, Bharatpur, BBSR",
         dressCode: "Evening Cocktail & Glamour",
