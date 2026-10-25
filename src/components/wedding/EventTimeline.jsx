@@ -84,25 +84,25 @@ const events = [
       },
     ],
   },
-  {
-    day: "Day 4",
-    date: "27th November 2026",
-    title: "शुभ विवाह मुहूर्त",
-    tagline: "The Auspicious Muhurtam (Pre-Dawn)",
-    venue: "Tangerine Grand Hall 1 & 2, Hotel Lemon Tree, Bharatpur, Bhubaneswar",
-    venueKey: "lemon-tree",
-    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Lemon+Tree+Hotel+Bharatpur+Bhubaneswar",
-    image: TOAST_BG,
-    accent: "#6B0F1A",
-    items: [
-      {
-        name: "शुभ विवाह मुहूर्त (Wedding Muhurtam)",
-        time: "5:02 AM (27 Nov, pre-dawn)",
-        location: "Tangerine Grand Hall 1 & 2, Hotel Lemon Tree",
-        dressCode: "Traditional Auspicious Attire",
-      },
-    ],
-  },
+  // {
+  //   day: "Day 4",
+  //   date: "27th November 2026",
+  //   title: "शुभ विवाह मुहूर्त",
+  //   tagline: "The Auspicious Muhurtam (Pre-Dawn)",
+  //   venue: "Tangerine Grand Hall 1 & 2, Hotel Lemon Tree, Bharatpur, Bhubaneswar",
+  //   venueKey: "lemon-tree",
+  //   googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Lemon+Tree+Hotel+Bharatpur+Bhubaneswar",
+  //   image: TOAST_BG,
+  //   accent: "#6B0F1A",
+  //   items: [
+  //     {
+  //       name: "शुभ विवाह मुहूर्त (Wedding Muhurtam)",
+  //       time: "5:02 AM (27 Nov, pre-dawn)",
+  //       location: "Tangerine Grand Hall 1 & 2, Hotel Lemon Tree",
+  //       dressCode: "Traditional Auspicious Attire",
+  //     },
+  //   ],
+  // },
 ];
 
 /* ═══════════════════════════════════════════════════════

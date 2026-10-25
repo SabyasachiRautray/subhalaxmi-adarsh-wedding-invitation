@@ -27,7 +27,7 @@ const VENUES = {
       { icon: "💛", label: "Haldi", time: "25 Nov · 10 AM", at: "Poolside" },
       { icon: "🍸", label: "Sangeet", time: "25 Nov · 6:30 PM", at: "Tangerine Hall 2" },
       { icon: "💍", label: "Reception & Vivah", time: "26 Nov · 7:30 PM", at: "Tangerine Hall 1 & 2" },
-      { icon: "🙏", label: "Muhurtam", time: "26 Nov · 5:02 AM*", at: "Tangerine Hall 1 & 2" },
+      { icon: "🙏", label: "Muhurtam", time: "27 Nov · 5:02 AM*", at: "Tangerine Hall 1 & 2" },
     ],
   },
   "residence": {

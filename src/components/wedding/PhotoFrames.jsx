@@ -44,7 +44,6 @@ const PhotoFrames = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-
           <h2
             style={{
               fontFamily: "'Great Vibes', cursive",
@@ -53,7 +52,7 @@ const PhotoFrames = () => {
               lineHeight: 1.2,
             }}
           >
-            A Tale of Two Hearts
+            Match Made by the Universe
           </h2>
 
           <p
@@ -66,7 +65,7 @@ const PhotoFrames = () => {
               fontStyle: "italic",
             }}
           >
-            Every love story is beautiful, but ours is our favourite.
+            Brought together by family, bound by love.
           </p>
 
           <div
@@ -82,7 +81,6 @@ const PhotoFrames = () => {
 
         {/* Collage Container */}
         <div className="relative w-full flex flex-col md:block items-center justify-center gap-16 md:gap-0 md:h-[800px] pt-4 pb-16 md:py-0">
-
           {/* Bride - Top Left (Floating overlapping on desktop, Top on mobile) */}
           <motion.div
             className="relative md:absolute z-20 w-[220px] h-[280px] md:w-[220px] md:h-[300px] md:left-[5%] lg:left-[15%] md:top-[10%] self-start md:self-auto ml-2 md:ml-0"
@@ -100,10 +98,14 @@ const PhotoFrames = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
-
               </div>
               <div className="absolute -bottom-4 -right-4 bg-[var(--clr-maroon)] text-[var(--clr-gold-bright)] px-4 py-1.5 rounded-sm shadow-lg rotate-[-5deg]">
-                <span style={{ fontFamily: "'Alex Brush', cursive" }} className="font-display text-lg sm:text-xl">Adarsh</span>
+                <span
+                  style={{ fontFamily: "'Alex Brush', cursive" }}
+                  className="font-display text-lg sm:text-xl"
+                >
+                  Adarsh
+                </span>
               </div>
             </div>
           </motion.div>
@@ -161,7 +163,12 @@ const PhotoFrames = () => {
                 />
               </div>
               <div className="absolute -top-4 -left-4 bg-[var(--clr-gold)] text-[var(--clr-maroon-deep)] px-4 py-1.5 rounded-sm shadow-lg rotate-[5deg]">
-                <span style={{ fontFamily: "'Alex Brush', cursive" }} className="font-display  text-lg sm:text-xl font-semibold">Radhika</span>
+                <span
+                  style={{ fontFamily: "'Alex Brush', cursive" }}
+                  className="font-display  text-lg sm:text-xl font-semibold"
+                >
+                  Radhika
+                </span>
               </div>
             </div>
           </motion.div>
@@ -173,7 +180,15 @@ const PhotoFrames = () => {
             whileInView={{ opacity: 0.4 }}
             transition={{ delay: 0.6 }}
           >
-            <h4 style={{ fontFamily: "'Great Vibes', cursive", fontSize: "4rem", color: "var(--clr-gold)" }}>Two Souls</h4>
+            <h4
+              style={{
+                fontFamily: "'Great Vibes', cursive",
+                fontSize: "4rem",
+                color: "var(--clr-gold)",
+              }}
+            >
+              Two Souls
+            </h4>
           </motion.div>
           <motion.div
             className="absolute z-0 right-[10%] top-[20%] opacity-40 hidden md:block"
@@ -181,9 +196,16 @@ const PhotoFrames = () => {
             whileInView={{ opacity: 0.4 }}
             transition={{ delay: 0.8 }}
           >
-            <h4 style={{ fontFamily: "'Great Vibes', cursive", fontSize: "4rem", color: "var(--clr-maroon)" }}>One Heart</h4>
+            <h4
+              style={{
+                fontFamily: "'Great Vibes', cursive",
+                fontSize: "4rem",
+                color: "var(--clr-maroon)",
+              }}
+            >
+              One Heart
+            </h4>
           </motion.div>
-
         </div>
       </div>
     </section>

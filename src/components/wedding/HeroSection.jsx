@@ -179,7 +179,7 @@ const HeroSection = () => {
           fontWeight: 500,
         }}
       >
-        Together with their families
+        {/* Together with their families */}
       </motion.p>
 
       {/* Groom Name — slides in from left */}
