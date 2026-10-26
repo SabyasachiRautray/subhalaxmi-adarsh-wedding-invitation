@@ -5,7 +5,7 @@ import { MapPin, Clock, ChevronRight, ChevronLeft, Navigation } from "lucide-rea
 
 const HALDI_BG = "/haldi.webp";
 const SANGEET_BG = "/reception.webp";
-const MEHENDI_BG = "/mehndi.webp";
+const MEHENDI_BG = "/malemehendi.webp";
 const TOAST_BG = "/wedding.webp";
 
 const events = [
@@ -23,7 +23,7 @@ const events = [
       {
         name: "मेहंदी (Mehendi) — Pyar Ka Rang",
         time: "6:00 PM onwards",
-        location: "Tamarind Terraces, Bhubaneswar",
+        location: "Society Hall,Tamarind Terraces, Bhubaneswar",
         dressCode: "Festive Green / Ethnic",
       },
     ],
