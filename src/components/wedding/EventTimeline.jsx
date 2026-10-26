@@ -14,7 +14,7 @@ const events = [
     date: "24th November 2026",
     title: "मेहंदी",
     tagline: "Pyar Ka Rang",
-    venue: "Tamarind Terraces, Bhubaneswar",
+    venue: "Society Hall,Tamarind Terraces, Bhubaneswar",
     venueKey: "residence",
     googleMapsUrl: "https://www.google.com/maps/place/Tamarind+Terraces/@20.3371696,85.7980118,17z/data=!4m6!3m5!1s0x3a1908fa68d81933:0xe70c42d21524710e!8m2!3d20.3374267!4d85.7979575!16s%2Fg%2F11bbrk_9z8",
     image: MEHENDI_BG,
